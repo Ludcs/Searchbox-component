@@ -6,13 +6,11 @@ export const App = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [changeIcon, setChangeIcon] = useState(false);
-  //console.log(users);
 
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=10')
       .then((res) => res.json())
       .then((data) => {
-        //console.log(data);
         setUsers(data.results);
         setFilteredUsers(data.results);
       });
@@ -35,8 +33,8 @@ export const App = () => {
           <div className="input_container">
             <SearchBox
               changeIcon={changeIcon}
+              filterUsers={filterUsers}
               setChangeIcon={setChangeIcon}
-              handleFiltered={filterUsers}
             />
           </div>
           {users.length === 0 ? (
