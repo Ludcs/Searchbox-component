@@ -24,12 +24,12 @@ export const App = () => {
   };
 
   return (
-    <div className="m-auto w-full p-24">
+    <div className="m-auto w-64 h-full flex flex-col justify-center items-center">
       <h1 className="font-bold text-2xl text-center text-slate-700 mb-2">
-        SearchBox Component
+        Searchbox Users
       </h1>
-      <div className="w-fit m-auto h-full flex flex-col justify-center items-center border border-slate-300 ">
-        <div className="main_container">
+      <div className="w-full border border-slate-300 ">
+        <div>
           <div className="input_container">
             <SearchBox
               changeIcon={changeIcon}
@@ -38,9 +38,11 @@ export const App = () => {
             />
           </div>
           {users.length === 0 ? (
-            <p className="text-center">Loading...</p>
+            <div className="h-[338px]">
+              <p className="text-center">Loading...</p>
+            </div>
           ) : (
-            <div className="users_container">
+            <div className="h-[338px]">
               {filteredUsers.length === 0 ? (
                 <p className="text-center">No matches</p>
               ) : (
