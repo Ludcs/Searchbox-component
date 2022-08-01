@@ -13,3 +13,11 @@ Construir un componente con funcionalidad de búsqueda para que cuando se tipee 
 ## Recursos:
 
 - [API de usuarios random](https://randomuser.me/api/?results=100)
+
+---
+
+## Deploy
+
+[Visitar Web](https://searchbox-users-component.vercel.app/)
+
+![](./src/searchbox.JPG)
